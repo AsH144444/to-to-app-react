@@ -14,9 +14,7 @@ export function Input({data, setData}) {
     const newValue =[...data, value]
     
     setData(newValue);
-   
-
-    console.log(data);
+    setValue("")
   }
   return (
     <div>
