@@ -1,20 +1,27 @@
-import { useState, } from "react";
+import { useState } from "react";
 
-
-export function Input({data, setData}) {
+export function Input({ data, setData, inputRef }) {
   const [value, setValue] = useState("");
 
   const Change = (event) => {
     setValue(event.target.value);
-    
-    
   };
 
   function SaveNote() {
-    const newValue =[...data, value]
-    
+    if (value === "") {
+      alert("your have to Enter to save");
+      return;
+    }
+
+    const newValue = [...data, value];
+
     setData(newValue);
-    setValue("")
+    setValue("");
+  }
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      SaveNote();
+    }
   }
   return (
     <div>
@@ -23,14 +30,19 @@ export function Input({data, setData}) {
           <h1 id="to">To Do App</h1>
         </div>
         <div className="nav-right">
-          <input value={value} onChange={Change} id="ninput" type="text" />
+          <input
+            value={value}
+            onChange={Change}
+            id="ninput"
+            type="text"
+            ref={inputRef}
+            onKeyDown={handleKeyDown}
+          />
           <button id="savebtn" onClick={SaveNote}>
             Save
           </button>
         </div>
       </div>
-          
     </div>
-
   );
 }

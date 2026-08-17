@@ -1,4 +1,4 @@
-import { useState , useEffect } from 'react';
+import { useState , useEffect, useRef } from 'react';
 import { Input } from './input'
 import { Display } from './display'
 
@@ -8,7 +8,7 @@ function App() {
     const [data, setData] = useState(
     JSON.parse(localStorage.getItem("note")) || [],
   );
-
+  const inputRef =useRef(null)
   useEffect(() => {
     localStorage.setItem("note", JSON.stringify(data));
     
@@ -18,8 +18,8 @@ function App() {
 
   return (
     <>
-      <Input data ={data} setData ={setData} />
-      <Display data={data} setData={setData} />
+      <Input data ={data} setData ={setData} inputRef={inputRef} />
+      <Display data={data} setData={setData} inputRef={inputRef} />
 
     </>
   )

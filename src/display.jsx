@@ -1,29 +1,42 @@
-import { useState } from "react";
+import { useState,} from "react";
 
 import { Displaydone } from "./displayDone";
-export function Display({ data, setData }) {
+export function Display({ data, setData, inputRef }) {
   const [dones, setDones] = useState(
     JSON.parse(localStorage.getItem("done")) || [],
   );
 
+  const newData = data.toReversed();
   function deletes(inde) {
-    setData(data.filter((_, index) => inde !== index));
+    setData(newData.filter((_, index) => inde !== index));
   }
   function done(inde) {
-    const saveDones = [...dones, data[inde]];
+    const saveDones = [...dones, newData[inde]];
 
     setDones(saveDones);
     localStorage.setItem("done", JSON.stringify(saveDones));
-    setData(data.filter((_, index) => inde !== index));
+    setData(newData.filter((_, index) => inde !== index));
   }
+  function Focus() {
+    inputRef.current.focus();
+  }
+
   return (
     <>
-      <div className="for-h">
-        {" "}
-        <h1 id="h">Yours To-Do's</h1>
-      </div>
+      {data.length === 0 && (
+        <div className="dav">
+          <button className="focus" onClick={Focus} >
+            Create
+          </button>
+        </div>
+      )}
+      {data.length > 0 && (
+        <div className="for-h">
+          <h1 id="h">Yours To-Do's</h1>
+        </div>
+      )}
       <div id="display">
-        {data.map((element, index) => {
+        {newData.map((element, index) => {
           return (
             <div className="d-box" key={index}>
               <p className="p-show">{element}</p>
