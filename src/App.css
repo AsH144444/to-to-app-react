@@ -26,7 +26,6 @@ body {
   align-items: center;
   width: 200px;
   padding-left: 40px;
-  
 }
 #ninput {
   width: 350px;
@@ -35,9 +34,8 @@ body {
   margin: 10px;
   padding-left: 5px;
   outline: none;
-  border-color: none;
+  border-style: none;
   font-size: 20px;
-
 }
 #savebtn {
   width: 60px;
@@ -56,11 +54,10 @@ body {
 .dav {
   text-align: center;
   padding-top: 100px;
-  
 }
 .focus {
   justify-content: center;
-    width: 100px;
+  width: 100px;
   height: 45px;
   background-color: #457b9d;
   color: #fff;
@@ -69,13 +66,12 @@ body {
   margin-left: 5px;
 }
 
-
 #h {
   text-align: center;
   padding: 20px;
   color: #fff;
 }
-.for-h{
+.for-h {
   display: flex;
   justify-self: center;
   align-items: center;
@@ -96,29 +92,24 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 20px;
-
 }
 .d-box {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 10px;
-   width: 100%;
+  width: 100%;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-
 }
 .p-show {
- display: inline-block;
+  display: inline-block;
   min-width: 200px;
   max-width: 200px;
-  font-size: 2
-  0px;
-  overflow-wrap:break-word ;
-
-  
+  font-size: 2 0px;
+  overflow-wrap: break-word;
 }
 .done-nav {
   display: flex;
@@ -132,14 +123,13 @@ body {
   height: 50px;
   border-radius: 10px;
 }
-.done-h2{
+.done-h2 {
   margin-left: 40px;
-
 }
 
 .p-done {
   text-align: center;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .done {
@@ -156,26 +146,24 @@ body {
 .delete {
   width: 60px;
   height: 25px;
-  background-color: #E63946;
+  background-color: #e63946;
   color: #fff;
   border-radius: 5px;
   border-style: none;
   margin-left: 5px;
   cursor: pointer;
-  
 }
 
-.done-btn{
-    width: 85px;
+.done-btn {
+  width: 85px;
   height: 35px;
-  background-color: #E63946;
+  background-color: #e63946;
   color: #fff;
   border-radius: 10px;
   border-style: none;
   margin-right: 40px;
   cursor: pointer;
 }
-
 
 #savebtn:hover {
   background-color: #35617f;
@@ -184,33 +172,30 @@ body {
   background-color: #21796d;
 }
 
-
-
 .delete:hover {
   background-color: #c62835;
 }
 
-.done-btn:hover{
-    background-color: #c62835;
-
+.done-btn:hover {
+  background-color: #c62835;
 }
 
-.focus:hover{
-    background-color: #35617f;
+.focus:hover {
+  background-color: #35617f;
 }
 
-#ninput:focus{
-  box-shadow: 0 0 0 1  #000 ;
+#ninput:focus {
+  box-shadow: 0 0 0 1 #000;
 }
 
-#display-done{
+#display-done {
   background-color: #fff;
   max-width: 600px;
   margin: 0 auto;
   border-radius: 10px;
 }
 
-.done-h2{
+.done-h2 {
   color: #fff;
 }
 
