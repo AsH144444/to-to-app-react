@@ -249,15 +249,14 @@ body {
     font-size: 10px;
   }
   .for-h {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    max-width: 150px;
-    max-height: 30px;
+    width: 150px;
+    width: 150px;
+    justify-content: center;
   }
 
   .for-h h1 {
-    font-size: 10px;
+        font-size: 10px;
+        
   }
 
   .done-btn {
