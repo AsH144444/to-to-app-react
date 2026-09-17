@@ -249,6 +249,9 @@ body {
     font-size: 10px;
   }
   .for-h {
+    display: flex;
+    justify-self: center;
+    align-items: center;
     max-width: 150px;
     max-height: 30px;
   }
